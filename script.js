@@ -91,3 +91,88 @@ console.log(friends[1]);
 console.log(friends[2]);
 console.log(friends[0].name);
 console.log(friends[0].luckyNumbers[1]);
+
+//Учет долгов
+var owedMoney = {};
+owedMoney["Джимми"] = 5;
+owedMoney["Анна"] = 7;
+console.log(owedMoney["Джимми"]);
+console.log(owedMoney["Элис"]);
+owedMoney["Джимми"] += 3;
+console.log(owedMoney["Джимми"]);
+owedMoney["Анна"] += 1;
+console.log(owedMoney["Анна"]);
+console.log(owedMoney);
+
+//Хранение информации о фильмах
+var movies = {
+    "В поисках Немо": {
+    releaseDate: 2003,
+    duration: 100,
+    actors: ["Альберт Брукс", "Эллен Дедженерес", "Александр Гоулд"],
+    format: "DVD"
+    },
+    "Звездные войны: Эпизод VI — Возвращение джедая": {
+    releaseDate: 1983,
+    duration: 134,
+    actors: ["Марк Хэмилл", "Харрисон Форд", "Кэрри Фишер"],
+    format: "DVD"
+    },
+    "Гарри Поттер и Кубок огня": {
+    releaseDate: 2005,
+    duration: 157,
+    actors: ["Дэниел Рэдклифф", "Эмма Уотсон", "Руперт Гринт"],
+    format: "Blu-ray"
+    }
+   };
+
+   var findingNemo = movies["В поисках Немо"];
+   console.log(findingNemo.duration);
+   console.log(findingNemo.format);
+
+   var cars = {
+    releaseDate: 2006,
+    duration: 117,
+    actors: ["Оуэн Уилсон", "Бонни Хант", "Пол Ньюман"],
+    format: "Blu-ray"
+   };
+   movies["Тачки"] = cars;
+   console.log(Object.keys(movies));
+
+//Home work
+
+   //#1. Подсчет очков
+    // Представьте, что вы играете в какую-нибудь игру со своими друзьями и вам нужно вести счет. Создайте для этого объект и назовите 
+    // его scores. Пусть ключами будут имена ваших друзей, а значениями — набранные ими очки (0 или больше). Счет игроков надо 
+    // будет увеличивать по мере того, как они зарабатывают новые 
+    // очки. Как вы будете менять счет игрока, хранящийся в объекте 
+    // scores?
+
+    var scores = { 
+        Julia: 15,
+        Kostia: 5,
+        Jenia: 8,
+        Sasha: 18
+    };
+    console.log(scores.Julia);
+    console.log(scores.Kostia);
+    console.log(scores.Jenia);
+    console.log(scores.Sasha);
+    scores.Julia += 1;
+    scores.Kostia += 3;
+    scores.Jenia += 8;
+    scores.Sasha += 12;
+    console.log(scores.Julia);
+    console.log(scores.Kostia);
+    console.log(scores.Jenia);
+    console.log(scores.Sasha);
+
+    //#2. Вглубь объектов и массивов
+// Пускай у вас есть такой объект:
+var myCrazyObject = {
+    "name": "Нелепый объект",
+    "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
+    "random animal": "Банановая акула"
+    };
+    //Как одной строкой JavaScript-кода извлечь из этого объекта число 123? Проверьте свое решение, запустив его в консоли.
+    console.log(myCrazyObject["some array"][2].number);
